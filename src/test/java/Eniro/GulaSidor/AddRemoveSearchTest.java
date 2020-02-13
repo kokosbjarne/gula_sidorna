@@ -1,14 +1,8 @@
 package Eniro.GulaSidor;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import junit.runner.Version;
-import org.junit.jupiter.api.Test;
 
-import Eniro.GulaSidor.AddRemoveSearch;
-import Eniro.GulaSidor.ContactBook;
-import Eniro.GulaSidor.LoadSave;
-import Eniro.GulaSidor.Person;
+import org.junit.Test;
 
 public class AddRemoveSearchTest {
 
