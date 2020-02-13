@@ -3,6 +3,7 @@ package Eniro.GulaSidor;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -12,13 +13,14 @@ public class ContactBookTest  {
 	private ContactBook contactBook;
 	
 	
-	@BeforeEach 
+	@Before 
 	public void addPerson() {
 	Person person = new Person(); 
 	person.fname = "Simon"; 
 	person.lname="Södergren";
 	person.number = "0721641288"; 
-	contactBook = new ContactBook(); 
+	contactBook = new ContactBook();
+
 	}
 	
 	@Test
