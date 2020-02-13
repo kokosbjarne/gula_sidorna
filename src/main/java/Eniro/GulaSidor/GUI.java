@@ -92,15 +92,14 @@ public class GUI {
 		listSelectionModel = list.getSelectionModel();
 		listSelectionModel.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
+				textFieldName.setText(cb.p.get(listSelectionModel.getAnchorSelectionIndex()).fname
+				+ " " + cb.p.get(listSelectionModel.getAnchorSelectionIndex()).lname);
+				textFieldNumber.setText(cb.p.get(listSelectionModel.getAnchorSelectionIndex()).number);
+				listSelectionModel.getAnchorSelectionIndex();
 				
 			}
 			
 		});
-		
-//	ImageIcon image = new ImageIcon("image/pic1.jpg");
-//	JLabel label = new JLabel("", image, JLabel.CENTER);
-//	JPanel panel = new JPanel(new BorderLayout());
-//	panel.add( label, BorderLayout.CENTER );
 
 		mainFrame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent windowEvent) {
@@ -135,21 +134,11 @@ public class GUI {
 		addButton.setPreferredSize(new Dimension(100, 40));
 		searchButton.setPreferredSize(new Dimension(100, 40));
 		removeButton.setPreferredSize(new Dimension(100, 40));
-
-//		contactBook.setActionCommand("Choose");
-//		addButton.setActionCommand("Add");
-//		searchButton.setActionCommand("Search");
-//		removeButton.setActionCommand("Remove");
-
+		
 		contactBook.setBackground(new Color(255, 224, 1));
 		addButton.setBackground(new Color(255, 224, 1));
 		searchButton.setBackground(new Color(255, 224, 1));
 		removeButton.setBackground(new Color(255, 224, 1));
-
-//		chooseButton.addActionListener(new ButtonClickListener());
-//		addButton.addActionListener(new ButtonClickListener());
-//		searchButton.addActionListener(new ButtonClickListener());
-//		removeButton.addActionListener(new ButtonClickListener());
 
 		controlPanel.add(contactBook);
 		controlPanel.add(addButton);
@@ -173,10 +162,11 @@ public class GUI {
 			}
 		});
 
-		//
+		/*
+		 * Metod EJ KLAR, vid klick ska defaultListModel visa telefonboken igen. FÅR EJ TILL DET :(
+		 */
 		contactBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-//			ars.Add(textField.getText(), textField.getText());
 				defaultListModel = new DefaultListModel<String>();
 
 				for (int j = 0; j < cb.p.size(); j++) {
