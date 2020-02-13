@@ -23,7 +23,7 @@ public class RandomizeContacts {
 		book.p = person;
 		ls.Save(book);
 	}
-
+ede
 	static void RandomPeople(ArrayList<Person> p) {
 		for (int i = 721456; i < 1000000; i++) {
 
