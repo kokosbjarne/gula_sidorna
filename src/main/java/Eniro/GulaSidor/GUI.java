@@ -92,15 +92,14 @@ public class GUI {
 		listSelectionModel = list.getSelectionModel();
 		listSelectionModel.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
+				textFieldName.setText(cb.p.get(listSelectionModel.getAnchorSelectionIndex()).fname
+				+ " " + cb.p.get(listSelectionModel.getAnchorSelectionIndex()).lname);
+				textFieldNumber.setText(cb.p.get(listSelectionModel.getAnchorSelectionIndex()).number);
+				listSelectionModel.getAnchorSelectionIndex();
 				
 			}
 			
 		});
-		
-//	ImageIcon image = new ImageIcon("image/pic1.jpg");
-//	JLabel label = new JLabel("", image, JLabel.CENTER);
-//	JPanel panel = new JPanel(new BorderLayout());
-//	panel.add( label, BorderLayout.CENTER );
 
 		mainFrame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent windowEvent) {
@@ -126,32 +125,22 @@ public class GUI {
 
 	private void eventDemo() {
 
-		JButton chooseButton = new JButton("Choose");
+		JButton contactBook = new JButton("Contact Book");
 		JButton addButton = new JButton("Add");
 		JButton searchButton = new JButton("Search");
 		JButton removeButton = new JButton("Remove");
 
-		chooseButton.setPreferredSize(new Dimension(100, 40));
+		contactBook.setPreferredSize(new Dimension(120, 40));
 		addButton.setPreferredSize(new Dimension(100, 40));
 		searchButton.setPreferredSize(new Dimension(100, 40));
 		removeButton.setPreferredSize(new Dimension(100, 40));
-
-		chooseButton.setActionCommand("Choose");
-		addButton.setActionCommand("Add");
-		searchButton.setActionCommand("Search");
-		removeButton.setActionCommand("Remove");
-
-		chooseButton.setBackground(new Color(255, 224, 1));
+		
+		contactBook.setBackground(new Color(255, 224, 1));
 		addButton.setBackground(new Color(255, 224, 1));
 		searchButton.setBackground(new Color(255, 224, 1));
 		removeButton.setBackground(new Color(255, 224, 1));
 
-//		chooseButton.addActionListener(new ButtonClickListener());
-//		addButton.addActionListener(new ButtonClickListener());
-//		searchButton.addActionListener(new ButtonClickListener());
-//		removeButton.addActionListener(new ButtonClickListener());
-
-		controlPanel.add(chooseButton);
+		controlPanel.add(contactBook);
 		controlPanel.add(addButton);
 		controlPanel.add(searchButton);
 		controlPanel.add(removeButton);
@@ -173,10 +162,22 @@ public class GUI {
 			}
 		});
 
-		chooseButton.addActionListener(new ActionListener() {
+		/*
+		 * Metod EJ KLAR, vid klick ska defaultListModel visa telefonboken igen. FÅR EJ TILL DET :(
+		 */
+		contactBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-//			ars.Add(textField.getText(), textField.getText());
-				System.out.println("Du tryckte choose");
+				defaultListModel = new DefaultListModel<String>();
+
+				for (int j = 0; j < cb.p.size(); j++) {
+					defaultListModel.addElement(cb.p.get(j).fname + " " + cb.p.get(j).lname + " " + cb.p.get(j).number);
+				}
+				JList<String> list = new JList<String>(defaultListModel);
+
+
+				System.out.println("Du tryckte Contact Book");
+				System.out.println("dlm size är : " + defaultListModel.getSize());
+				
 			}
 		});
 		addButton.addActionListener(new ActionListener() {
@@ -192,7 +193,7 @@ public class GUI {
 			public void actionPerformed(ActionEvent event) {
 
 				defaultListModel.clear();
-
+				System.out.println("dlm.size är: " + defaultListModel.size());
 
 				AddRemoveSearch ars = new AddRemoveSearch(cb);
 
