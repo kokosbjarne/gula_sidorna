@@ -12,7 +12,10 @@ public class AddRemoveSearch {
             cb = book;
         }
 
-    //     Lägger till en ny person i listan    
+        /**
+         * Lägger till en ny person i listan
+        */
+
         public void Add(String a, String b) {
             String[] tempname = {"", ""};        int tempcounter = 0;
             for (int i = 0; i < a.length(); i++) {
@@ -30,7 +33,9 @@ public class AddRemoveSearch {
             LoadSave ls = new LoadSave(); 
             ls.Save(cb);
         }    
-    //      Går igenom ArrayList och om det matchar namn eller nummer så raderas den 
+    /**
+     * Går igenom ArrayList och om det matchar namn eller nummer så raderas den 
+     */ 
     public void Remove(String a, String b) {
         String[] tempname = {"", ""};
         int tempcounter = 0;
@@ -58,7 +63,9 @@ public class AddRemoveSearch {
             }
         }
     }
-    // Vid sökning så öppnas en tom ArrayList som fylls på med namn/nummer som matchar sökningen
+    /**
+     *Vid sökning så öppnas en tom ArrayList som fylls på med namn/nummer som matchar sökningen
+     */
     public void Search (String a, String b) 
     {    	
         foundpeople = new ArrayList<Person>();

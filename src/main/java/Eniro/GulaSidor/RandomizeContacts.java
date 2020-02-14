@@ -4,18 +4,27 @@ package Eniro.GulaSidor;
 import java.util.ArrayList;
 import java.util.Random;
 
-//Skriver en Randomize för att få fram olika kontakter
+/** 
+ * Skriver en Randomize för att få fram olika kontakter
+*/
 public class RandomizeContacts {
-	//3 listor av Strängar förnamn, efternamn, nummer
-	//1 lista för att sedan spara personer
+
+	/**
+	 * 	3 listor av Strängar förnamn, efternamn, nummer
+	 * 	1 lista för att sedan spara personer
+	 */
+	
 	ArrayList<String> fnamn = new ArrayList<String>();
 	ArrayList<String> enamn = new ArrayList<String>();
 	ArrayList<String> number = new ArrayList<String>();
 	ArrayList<Person> person = new ArrayList<Person>();
 
-	//kallar på min RandomPeople function för att slumpa fram personer
-	//jag skapar en ny contactbook för att spara det sedan till Json
-	//sen använder jag LoadSave scriptet för att spara personerna till min Json
+	/**
+	* kallar på min RandomPeople function för att slumpa fram personer
+	* jag skapar en ny contactbook för att spara det sedan till Json
+	* sen använder jag LoadSave scriptet för att spara personerna till min Json
+	*/
+
 	public void main() {
 		RandomPeople(person);
 		LoadSave ls = new LoadSave();
@@ -24,10 +33,13 @@ public class RandomizeContacts {
 		ls.Save(book);
 	}
 
-	//kör en fori loop som statar på 721456 <- bara för att nummrerna ska inte bara vara 072000001 osv.
-	//lägger till förnamn i fnamn.
-	//genererar efternamn baserad på förnamnet (lägger bara till sson)
-	//sen genererar jag bara nya personer baserat på för/efter namn och nummer
+	/** 
+	* kör en fori loop som statar på 721456 <- bara för att nummrerna ska inte bara vara 072000001 osv.
+	* lägger till förnamn i fnamn.
+	* genererar efternamn baserad på förnamnet (lägger bara till sson)
+	* sen genererar jag bara nya personer baserat på för/efter namn och nummer
+	*/
+
 	public void RandomPeople(ArrayList<Person> p) {
 		for (int i = 721456; i < 1000000; i++) {
 

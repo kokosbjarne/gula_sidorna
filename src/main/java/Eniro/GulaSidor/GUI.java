@@ -223,10 +223,8 @@ public class GUI {
 
 	}
 
-	public static void main(String[] args) {
-
+	public void RunGui() {
 		GUI gui = new GUI();
 		gui.eventDemo();
-
 	}
 }
