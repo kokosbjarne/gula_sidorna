@@ -5,11 +5,10 @@ import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 
 public class ContactBookTest  {
 	
-	private Person person; 
+	private Person person;
 	private ContactBook contactBook;
 	
 	

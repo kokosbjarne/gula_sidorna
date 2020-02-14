@@ -4,11 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 
-import Eniro.GulaSidor.ContactBook;
-import Eniro.GulaSidor.LoadSave;
 
 public class LoadSaveTest {
 		
@@ -21,7 +17,6 @@ public class LoadSaveTest {
 		cb = new ContactBook();
 		ls = new LoadSave();
 		rc = new RandomizeContacts();
-		System.out.println("yo");
 	}
 	
     @Test

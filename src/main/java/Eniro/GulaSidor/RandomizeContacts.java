@@ -8,15 +8,15 @@ import java.util.Random;
 public class RandomizeContacts {
 	//3 listor av Strängar förnamn, efternamn, nummer
 	//1 lista för att sedan spara personer
-	static ArrayList<String> fnamn = new ArrayList<String>();
-	static ArrayList<String> enamn = new ArrayList<String>();
-	static ArrayList<String> number = new ArrayList<String>();
-	static ArrayList<Person> person = new ArrayList<Person>();
+	ArrayList<String> fnamn = new ArrayList<String>();
+	ArrayList<String> enamn = new ArrayList<String>();
+	ArrayList<String> number = new ArrayList<String>();
+	ArrayList<Person> person = new ArrayList<Person>();
 
 	//kallar på min RandomPeople function för att slumpa fram personer
 	//jag skapar en ny contactbook för att spara det sedan till Json
 	//sen använder jag LoadSave scriptet för att spara personerna till min Json
-	public static void main(String[] args) {
+	public void main() {
 		RandomPeople(person);
 		LoadSave ls = new LoadSave();
 		ContactBook book = new ContactBook();
@@ -24,7 +24,11 @@ public class RandomizeContacts {
 		ls.Save(book);
 	}
 
-	static void RandomPeople(ArrayList<Person> p) {
+	//kör en fori loop som statar på 721456 <- bara för att nummrerna ska inte bara vara 072000001 osv.
+	//lägger till förnamn i fnamn.
+	//genererar efternamn baserad på förnamnet (lägger bara till sson)
+	//sen genererar jag bara nya personer baserat på för/efter namn och nummer
+	public void RandomPeople(ArrayList<Person> p) {
 		for (int i = 721456; i < 1000000; i++) {
 
 			number.add("072" + String.valueOf(i));
@@ -66,11 +70,5 @@ public class RandomizeContacts {
 			person.number = number.get(i);
 			p.add(person);
 		}
-
-		/*
-		 * for (int i = 0; i < 500; i++) { System.out.println(p.get(i).name + ": " +
-		 * p.get(i).number); }
-		 */
-
 	}
 }

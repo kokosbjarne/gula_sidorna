@@ -5,6 +5,7 @@ public class Main {
     static ContactBook book = new ContactBook();
     public static void main(String[] args) {
         
+        //Main används mer för att testa olika grejer.
         LoadSave ls = new LoadSave();
         book = ls.Load();
 
