@@ -40,9 +40,9 @@ public class GUI {
 	ContactBook cb = new ContactBook();
 
 	/**
-	 * Konstruktor till klassen GUI som skapar en instans av Load
-	 * save-klassen och där Contactbook fylls med personer från Json
-	 * Konstruktorn kallar också på metoden GUI som kör GUI:t
+	 * Konstruktor till klassen GUI som skapar en instans av Load save-klassen och
+	 * där Contactbook fylls med personer från Json Konstruktorn kallar också på
+	 * metoden GUI som kör GUI:t
 	 */
 	public GUI() {
 
@@ -52,10 +52,10 @@ public class GUI {
 	}
 
 	/**
-	 * Metoden GUI() skapar en JFrame, en JPanel läggs på där alla
-	 * komponenter läggs på, DefaultListModel, JList, JScrollPane,
-	 * JTextField samt JButtons för olika funktioner. Här laddas också
-	 * kontakterna ur ContactBook in i DefaultListModel. 
+	 * Metoden GUI() skapar en JFrame, en JPanel läggs på där alla komponenter läggs
+	 * på, DefaultListModel, JList, JScrollPane, JTextField samt JButtons för olika
+	 * funktioner. Här laddas också kontakterna ur ContactBook in i
+	 * DefaultListModel.
 	 */
 	public void GUI() {
 		mainFrame = new JFrame("Contact Book");
@@ -99,10 +99,10 @@ public class GUI {
 		statusLabel.setSize(300, 300);
 
 		listSelectionModel = list.getSelectionModel();
-		
+
 		/**
-		 * Anonym klass där om man trycker på ett namn i ContactBook, så hamnar namn
-		 * och telefonnummer i textfälten.
+		 * Anonym klass där om man trycker på ett namn i ContactBook, så hamnar namn och
+		 * telefonnummer i textfälten.
 		 */
 		listSelectionModel.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
@@ -140,6 +140,9 @@ public class GUI {
 
 	}
 
+	/**
+	 * Metoden skapar knappar för olika ActionEvents, sätter size och färg på
+	 */
 	private void eventDemo() {
 
 		JButton contactBook = new JButton("Contact Book");
@@ -163,9 +166,6 @@ public class GUI {
 		controlPanel.add(removeButton);
 
 		mainFrame.setVisible(true);
-
-//	}
-//	final AddRemoveSearch ars = new AddRemoveSearch();
 
 		textFieldName.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
@@ -196,8 +196,6 @@ public class GUI {
 		});
 		addButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				System.out.println("Du tryckte add");
-
 				AddRemoveSearch ars = new AddRemoveSearch(cb);
 
 				ars.Add(textFieldName.getText(), textFieldNumber.getText());
@@ -207,17 +205,10 @@ public class GUI {
 			public void actionPerformed(ActionEvent event) {
 
 				defaultListModel.clear();
-				System.out.println("dlm.size är: " + defaultListModel.size());
 
 				AddRemoveSearch ars = new AddRemoveSearch(cb);
 
-				System.out.println("Du tryckte search");
-				System.out.println(cb.p.size());
-
 				ars.Search(textFieldName.getText(), textFieldNumber.getText());
-
-				System.out.println(ars.foundpeople.size());
-
 				for (int j = 0; j < ars.foundpeople.size(); j++) {
 
 					defaultListModel.addElement(ars.foundpeople.get(j).fname + " " + ars.foundpeople.get(j).lname + " "
@@ -227,8 +218,6 @@ public class GUI {
 		});
 		removeButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				System.out.println("Du tryckte remove");
-
 				AddRemoveSearch ars = new AddRemoveSearch(cb);
 
 				ars.Remove(textFieldName.getText(), textFieldNumber.getText());
