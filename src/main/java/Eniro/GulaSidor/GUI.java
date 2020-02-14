@@ -167,7 +167,7 @@ public class GUI {
 		 */
 		contactBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				defaultListModel = new DefaultListModel<String>();
+				defaultListModel.clear();
 
 				for (int j = 0; j < cb.p.size(); j++) {
 					defaultListModel.addElement(cb.p.get(j).fname + " " + cb.p.get(j).lname + " " + cb.p.get(j).number);
