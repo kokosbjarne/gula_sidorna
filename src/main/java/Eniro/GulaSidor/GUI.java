@@ -39,6 +39,11 @@ public class GUI {
 
 	ContactBook cb = new ContactBook();
 
+	/**
+	 * Konstruktor till klassen GUI som skapar en instans av Load
+	 * save-klassen och där Contactbook fylls med personer från Json
+	 * Konstruktorn kallar också på metoden GUI som kör GUI:t
+	 */
 	public GUI() {
 
 		LoadSave ls = new LoadSave();
@@ -46,6 +51,12 @@ public class GUI {
 		GUI();
 	}
 
+	/**
+	 * Metoden GUI() skapar en JFrame, en JPanel läggs på där alla
+	 * komponenter läggs på, DefaultListModel, JList, JScrollPane,
+	 * JTextField samt JButtons för olika funktioner. Här laddas också
+	 * kontakterna ur ContactBook in i DefaultListModel. 
+	 */
 	public void GUI() {
 		mainFrame = new JFrame("Contact Book");
 		mainFrame.setSize(600, 900);
@@ -79,7 +90,6 @@ public class GUI {
 		textFieldName.setFont(new java.awt.Font("Arial", Font.BOLD, 14));
 		textFieldNumber.setFont(new java.awt.Font("Arial", Font.BOLD, 14));
 
-//		textField.setBackground(new Color(255, 224, 1));
 		list.setBackground(new Color(255, 224, 1));
 		mainFrame.add(textFieldName);
 		mainFrame.add(textFieldNumber);
@@ -88,8 +98,12 @@ public class GUI {
 		statusLabel = new JLabel("", JLabel.CENTER);
 		statusLabel.setSize(300, 300);
 
-//Klick i listan -> textfield
 		listSelectionModel = list.getSelectionModel();
+		
+		/**
+		 * Anonym klass där om man trycker på ett namn i ContactBook, så hamnar namn
+		 * och telefonnummer i textfälten.
+		 */
 		listSelectionModel.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
 				textFieldName.setText(cb.p.get(listSelectionModel.getAnchorSelectionIndex()).fname + " "
@@ -101,6 +115,9 @@ public class GUI {
 
 		});
 
+		/**
+		 * Anoynym klass där om man stänger ned fönstret så stängs programmet ned.
+		 */
 		mainFrame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent windowEvent) {
 				System.exit(0);
@@ -168,7 +185,7 @@ public class GUI {
 		 */
 		contactBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				defaultListModel = new DefaultListModel<String>();
+				defaultListModel.clear();
 
 				for (int j = 0; j < cb.p.size(); j++) {
 					defaultListModel.addElement(cb.p.get(j).fname + " " + cb.p.get(j).lname + " " + cb.p.get(j).number);
