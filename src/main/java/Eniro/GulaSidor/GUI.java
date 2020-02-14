@@ -168,7 +168,7 @@ public class GUI {
 		 */
 		contactBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				defaultListModel.clear();
+				defaultListModel = new DefaultListModel<String>();
 
 				for (int j = 0; j < cb.p.size(); j++) {
 					defaultListModel.addElement(cb.p.get(j).fname + " " + cb.p.get(j).lname + " " + cb.p.get(j).number);
@@ -220,10 +220,8 @@ public class GUI {
 
 	}
 
-	public static void main(String[] args) {
-
+	public void RunGui() {
 		GUI gui = new GUI();
 		gui.eventDemo();
-
 	}
 }
