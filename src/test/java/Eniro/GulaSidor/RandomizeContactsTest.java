@@ -8,11 +8,12 @@ public class RandomizeContactsTest
 {
     RandomizeContacts rndContacts = new RandomizeContacts();
 
-
+	/**
+     *	Kollar ifall listan med personer fylls
+	 */
     @Test
     public void Generated()
     {
-        //Kollar ifall listan med personer fylls
         rndContacts.main();
 
         if(rndContacts.person.size() > 0)

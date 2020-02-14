@@ -6,10 +6,14 @@ import org.junit.Test;
 
 public class PersonTest
 {
+	
+	/**
+	 * testar ifall jag kan ändra variabler
+	 */
+	
     @Test 
     public void SetName()
     {
-        //testar ifall jag kan ändra variabler
         Person person = new Person();
         person.fname = "Peter";
         person.lname = "Ihm";

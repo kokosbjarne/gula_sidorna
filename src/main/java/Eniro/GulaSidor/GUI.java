@@ -70,7 +70,7 @@ public class GUI {
 			defaultListModel.addElement(cb.p.get(j).fname + " " + cb.p.get(j).lname + " " + cb.p.get(j).number);
 		}
 
-		image = new ImageIcon("src\\main\\java\\GulaSidor\\GulaSidor\\eniro.jpg");
+		image = new ImageIcon("src\\main\\java\\Eniro\\GulaSidor\\eniro.jpg");
 		JLabel label = new JLabel("", image, JLabel.CENTER);
 		JPanel panel = new JPanel(new BorderLayout());
 		panel.add(label, BorderLayout.CENTER);

@@ -46,29 +46,29 @@ public class RandomizeContacts {
 			number.add("072" + String.valueOf(i));
 		}
 
-		fnamn.add("Liam");
-		fnamn.add("Emma");
-		fnamn.add("Noah");
-		fnamn.add("Olivia");
-		fnamn.add("William");
-		fnamn.add("Ava");
-		fnamn.add("James");
-		fnamn.add("Isabella");
-		fnamn.add("Oliver");
-		fnamn.add("Sophia");
-		fnamn.add("Benjamin");
-		fnamn.add("Charlotte");
-		fnamn.add("Elijah");
-		fnamn.add("Mia");
-		fnamn.add("Lucas");
-		fnamn.add("Amelia");
-		fnamn.add("Mason");
-		fnamn.add("Harper");
+		fnamn.add("Anders");
+		fnamn.add("Niklas");
+		fnamn.add("Johannes");
+		fnamn.add("Marcus");
+		fnamn.add("Jonas");
+		fnamn.add("Jens");
+		fnamn.add("Hampus");
+		fnamn.add("Pontus");
+		fnamn.add("Moltas");
+		fnamn.add("Lukas");
+		fnamn.add("Agnes");
+		fnamn.add("Iris");
+		fnamn.add("Frances");
+		fnamn.add("Ines");
+		fnamn.add("Lovis");
+		fnamn.add("Dis");
+		fnamn.add("Tobias");
+		fnamn.add("Rasmus");
 		fnamn.add("Logan");
-		fnamn.add("Evelyn");
+		fnamn.add("Rufus");
 
 		for (int i = 0; i < fnamn.size(); i++) {
-			enamn.add(fnamn.get(i) + "sson");
+			enamn.add(fnamn.get(i) + "son");
 		}
 
 		for (int i = 0; i < 500; i++) {
