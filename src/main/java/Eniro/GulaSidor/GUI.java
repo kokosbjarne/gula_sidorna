@@ -227,7 +227,7 @@ public class GUI {
 	}
 
 	public void RunGui() {
-		GUI gui = new GUI();
-		gui.eventDemo();
+//		GUI gui = new GUI();
+		eventDemo();
 	}
 }
