@@ -36,7 +36,7 @@ public class GUI {
 	private JTextField textFieldNumber;
 	private ImageIcon image;
 	private ListSelectionModel listSelectionModel;
-	
+
 	ContactBook cb = new ContactBook();
 
 	public GUI() {
@@ -59,7 +59,7 @@ public class GUI {
 			defaultListModel.addElement(cb.p.get(j).fname + " " + cb.p.get(j).lname + " " + cb.p.get(j).number);
 		}
 
-		image = new ImageIcon("src\\main\\java\\Eniro\\GulaSidor\\eniro.jpg");
+		image = new ImageIcon("src\\main\\java\\GulaSidor\\GulaSidor\\eniro.jpg");
 		JLabel label = new JLabel("", image, JLabel.CENTER);
 		JPanel panel = new JPanel(new BorderLayout());
 		panel.add(label, BorderLayout.CENTER);
@@ -87,18 +87,18 @@ public class GUI {
 		headerLabel = new JLabel("", JLabel.CENTER);
 		statusLabel = new JLabel("", JLabel.CENTER);
 		statusLabel.setSize(300, 300);
-		
+
 //Klick i listan -> textfield
 		listSelectionModel = list.getSelectionModel();
 		listSelectionModel.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
-				textFieldName.setText(cb.p.get(listSelectionModel.getAnchorSelectionIndex()).fname
-				+ " " + cb.p.get(listSelectionModel.getAnchorSelectionIndex()).lname);
+				textFieldName.setText(cb.p.get(listSelectionModel.getAnchorSelectionIndex()).fname + " "
+						+ cb.p.get(listSelectionModel.getAnchorSelectionIndex()).lname);
 				textFieldNumber.setText(cb.p.get(listSelectionModel.getAnchorSelectionIndex()).number);
 				listSelectionModel.getAnchorSelectionIndex();
-				
+
 			}
-			
+
 		});
 
 		mainFrame.addWindowListener(new WindowAdapter() {
@@ -134,7 +134,7 @@ public class GUI {
 		addButton.setPreferredSize(new Dimension(100, 40));
 		searchButton.setPreferredSize(new Dimension(100, 40));
 		removeButton.setPreferredSize(new Dimension(100, 40));
-		
+
 		contactBook.setBackground(new Color(255, 224, 1));
 		addButton.setBackground(new Color(255, 224, 1));
 		searchButton.setBackground(new Color(255, 224, 1));
@@ -163,7 +163,8 @@ public class GUI {
 		});
 
 		/*
-		 * Metod EJ KLAR, vid klick ska defaultListModel visa telefonboken igen. FÅR EJ TILL DET :(
+		 * Metod EJ KLAR, vid klick ska defaultListModel visa telefonboken igen. FÅR EJ
+		 * TILL DET :(
 		 */
 		contactBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
@@ -174,10 +175,6 @@ public class GUI {
 				}
 				JList<String> list = new JList<String>(defaultListModel);
 
-
-				System.out.println("Du tryckte Contact Book");
-				System.out.println("dlm size är : " + defaultListModel.getSize());
-				
 			}
 		});
 		addButton.addActionListener(new ActionListener() {
@@ -200,14 +197,14 @@ public class GUI {
 				System.out.println("Du tryckte search");
 				System.out.println(cb.p.size());
 
-
 				ars.Search(textFieldName.getText(), textFieldNumber.getText());
 
 				System.out.println(ars.foundpeople.size());
 
 				for (int j = 0; j < ars.foundpeople.size(); j++) {
 
-					defaultListModel.addElement(ars.foundpeople.get(j).fname + " " + ars.foundpeople.get(j).lname + " " + ars.foundpeople.get(j).number);
+					defaultListModel.addElement(ars.foundpeople.get(j).fname + " " + ars.foundpeople.get(j).lname + " "
+							+ ars.foundpeople.get(j).number);
 				}
 			}
 		});
