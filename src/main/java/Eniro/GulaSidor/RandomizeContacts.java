@@ -25,7 +25,7 @@ public class RandomizeContacts {
 	* sen använder jag LoadSave scriptet för att spara personerna till min Json
 	*/
 
-	public void main() {
+	public void go() {
 		RandomPeople(person);
 		LoadSave ls = new LoadSave();
 		ContactBook book = new ContactBook();

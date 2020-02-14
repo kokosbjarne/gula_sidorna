@@ -14,7 +14,7 @@ public class RandomizeContactsTest
     @Test
     public void Generated()
     {
-        rndContacts.main();
+        rndContacts.go();
 
         if(rndContacts.person.size() > 0)
             assertTrue(true);

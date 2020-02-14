@@ -7,7 +7,8 @@ public class Main {
         /**
          * Kallar på GUI
          */
-
+    	RandomizeContacts rc = new RandomizeContacts();
+    	rc.go();
 		GUI gui = new GUI();
 		gui.RunGui();
     }
