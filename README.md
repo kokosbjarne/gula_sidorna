@@ -1,10 +1,11 @@
 Projekt Gula Sidorna 
-Den här applikationen kan man söka efter telefonnummer till sina vänner. 
+- Den här applikationen kan man söka efter telefonnummer till sina vänner. 
 
-Att starta upp det De här instruktionerna kommer ge dig en kopia över vad du behöver för att få applikationen att köra på din lokala maskin för att testa och köra det. Följ anvisningarna här så kan ni köra programmet. 
+Att starta upp det 
+- De här instruktionerna kommer ge dig en kopia över vad du behöver för att få applikationen att köra på din lokala maskin för att testa och köra det. Följ anvisningarna här så kan ni köra programmet. 
 
 Förutsättning 
-Du behöver en dator av vilket slag som helst. Vill du se allt så behöver du Eclipse eller liknande program för att kunna se kod och vad vi gjort. Vill du bara köra filen så kan du använda vår JAR-fil för att köra. 
+- Du behöver en dator av vilket slag som helst. Vill du se allt så behöver du Eclipse eller liknande program för att kunna se kod och vad vi gjort. Vill du bara köra filen så kan du använda vår JAR-fil för att köra. 
 
 Installera / Köra
 1. Clona projektet via Github. 
@@ -16,7 +17,7 @@ Installera / Köra
 7. Om du vill söka så skriv in namn och sök via Searchknappen, eller telefonnummer.
 
 Köra testerna 
-Vi har använt Jenkins för att automatisera våra tester. JUnit har också använts för att testa våra metoder. Bland annat har vi gjort tester för lägga till, sök och ta bort ur kontaktlistan. 
+- Vi har använt Jenkins för att automatisera våra tester. JUnit har också använts för att testa våra metoder. Bland annat har vi gjort tester för lägga till, sök och ta bort ur kontaktlistan. 
 
 Ett exempel: 
 @Test 
@@ -42,10 +43,12 @@ Built With
 Version Gula Sidorna 1.1 
 
 Authors 
-Erik Manfredsson 
-Peter Ihm 
-Simon Södergren 
+- Erik Manfredsson 
+- Peter Ihm 
+- Simon Södergren 
 
-Licens Det här projektet är licenserat under GOAT License. 
+Licens
+- Det här projektet är licenserat under GOAT License. 
 
-Erkännande Big up till Logan Logansson! 
+Erkännande 
+- Big up till Logan Logansson! 
