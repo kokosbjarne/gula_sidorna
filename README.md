@@ -9,12 +9,13 @@ Förutsättning
 
 Installera / Köra
 1. Clona projektet via Github. 
-2. Dubbelklicka på JAR-filen. 
-3. Eller kör via Main i Eclipse eller liknande. 
-4. Sedan så lägger du till kontakter via Add. 
-5. Du tar bort kontakter via Remove. 
-6. Tryck på Contactbook så går du tillbaka till listan. 
-7. Om du vill söka så skriv in namn och sök via Searchknappen, eller telefonnummer.
+2. Kör jar:jar via Maven i antingen Git Bash eller i någon IDE. 
+3. Leta upp target/ mappen och Dubbelklicka på JAR-filen. 
+4. Eller kör via Main i Eclipse eller liknande. 
+5. Sedan så lägger du till kontakter via Add. 
+6. Du tar bort kontakter via Remove. 
+7. Tryck på Contactbook så går du tillbaka till listan. 
+8. Om du vill söka så skriv in namn och sök via Searchknappen, eller telefonnummer.
 
 Köra testerna 
 - Vi har använt Jenkins för att automatisera våra tester. JUnit har också använts för att testa våra metoder. Bland annat har vi gjort tester för lägga till, sök och ta bort ur kontaktlistan. 
@@ -35,12 +36,11 @@ assertNotEquals(0, contactBook.p.size()-1);
 Built With 
 - IDE Eclipse 
 - IDE Visual Studio Code 
-- Git - Gitsmart, Git Bash Maven 
-- Dependency Management 
-- Jenkins 
-- Automated tests 
+- Git, Gitsmart, Git Bash  
+- Dependency Management, Maven
+- Jenkins, Automated tests 
 
-Version Gula Sidorna 1.1 
+Version Gula Sidorna 1.0
 
 Authors 
 - Erik Manfredsson 
