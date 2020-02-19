@@ -5,7 +5,9 @@ import com.google.gson.Gson;
 
 public class LoadSave{
 
+	 
 	/**
+	 * @Author Peter Ihm
 	 * 	har en path för min Json file
 	 */
 	

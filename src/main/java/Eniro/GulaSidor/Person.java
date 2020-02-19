@@ -1,5 +1,9 @@
 package Eniro.GulaSidor;
 
+/**
+* @Author Peter Ihm
+ */
+
 public class Person {
 
 	public String fname;

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /** 
+ * @Author Peter Ihm
  * Skriver en Randomize för att få fram olika kontakter
 */
 public class RandomizeContacts {

@@ -8,6 +8,7 @@ public class PersonTest
 {
 	
 	/**
+     * @Author Peter Ihm
 	 * testar ifall jag kan ändra variabler
 	 */
 	
