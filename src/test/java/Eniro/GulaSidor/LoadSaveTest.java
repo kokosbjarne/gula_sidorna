@@ -28,6 +28,8 @@ public class LoadSaveTest {
     /*
      *  Testar RandomPeople metoden i RandomizeContactsklassen. Testet kollar att ArrayListen people
      *  fylls med kontakter när metoden körs.
+     *  
+     *  @author Erik M
      */
     
     @SuppressWarnings("static-access")
